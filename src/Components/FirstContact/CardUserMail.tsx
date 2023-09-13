@@ -1,33 +1,20 @@
 import { Box, Card, CardContent, Typography, TextField, Button } from '@mui/material';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-
-const theme = createTheme({
-  palette: {
-    primary: {
-      light: '#0000006B',
-      main: '#0000006B',
-    },
-    secondary: {
-      light: '#312783',
-      main: '#312783',
-    }
-  },
-});
+import { themeProvider } from '../Assets/ThemeStyle';
 
 const renderInputs = (
-  <ThemeProvider theme={theme}>
+  <ThemeProvider theme={themeProvider}>
     <TextField 
       sx={{ width: '620px', borderRadius: '4px', mr: '32px' }}
-      color='primary'
+      color='info'
       placeholder='Correo electrónico'
       variant="outlined"
     />
     <Button 
-    sx={{
-      width: '150px', height: '56px'
-    }}
-    variant="contained" color='secondary'>
+      sx={{ width: '150px', height: '56px' }}
+      variant="contained"
+    >
       Comenzar <ArrowForwardIcon />
     </Button>
   </ThemeProvider>
