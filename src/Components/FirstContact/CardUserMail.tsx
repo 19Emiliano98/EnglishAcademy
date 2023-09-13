@@ -1,4 +1,37 @@
-import { Card, CardContent, Typography } from '@mui/material';
+import { Box, Card, CardContent, Typography, TextField, Button } from '@mui/material';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      light: '#0000006B',
+      main: '#0000006B',
+    },
+    secondary: {
+      light: '#312783',
+      main: '#312783',
+    }
+  },
+});
+
+const renderInputs = (
+  <ThemeProvider theme={theme}>
+    <TextField 
+      sx={{ width: '620px', borderRadius: '4px', mr: '32px' }}
+      color='primary'
+      placeholder='Correo electrónico'
+      variant="outlined"
+    />
+    <Button 
+    sx={{
+      width: '150px', height: '56px'
+    }}
+    variant="contained" color='secondary'>
+      Comenzar <ArrowForwardIcon />
+    </Button>
+  </ThemeProvider>
+)
 
 const CardUserMail = () => {
   return (
@@ -11,7 +44,7 @@ const CardUserMail = () => {
         mt: 2.7, ml: 13
       }}
     >
-      <CardContent sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+      <CardContent sx={{ display: 'flex', flexDirection: 'column', mt: '13px', ml: '32px' }}>
         <Typography
           sx={{
             width: 750,
@@ -33,6 +66,9 @@ const CardUserMail = () => {
         >
           Dejanos tu correo electrónico y te contactaremos en breve.
         </Typography>
+        <Box sx={{ mt: 7, ml: '8px' }}>
+          {renderInputs}
+        </Box>
       </CardContent>
     </Card>
   )

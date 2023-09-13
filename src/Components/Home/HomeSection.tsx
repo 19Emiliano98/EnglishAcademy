@@ -7,7 +7,6 @@ const HomeSection = () => {
     <Box sx={{ m: -1 }}>
       <AppBar />
       <FirstContactSection />
-      
     </Box>
   )
 }
