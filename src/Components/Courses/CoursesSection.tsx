@@ -3,7 +3,7 @@ import Cards from "./Cards";
 
 const CoursesSection = () => {
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 10 }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 10, mb: 10 }}>
       <Typography 
         sx={{
           fontFamily: 'Work Sans', fontSize: '60px', fontWeight: 500,

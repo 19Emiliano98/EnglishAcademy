@@ -21,7 +21,7 @@ const ListItems: React.FC<ParentProps> = ( dataItems:ParentProps ) => {
                   }}
                 />
               </ListItemIcon>
-              <ListItemText primary={ x } sx={{ ml: -2.5 }}/>
+              <ListItemText primary={ x } sx={{ ml: -3 }}/>
             </Box>
           </ListItem>
         )

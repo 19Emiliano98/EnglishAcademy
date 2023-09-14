@@ -8,6 +8,7 @@ interface CardProps{
   alt: string;
   titleList: string;
   data: string[];
+  height: string;
 }
 
 const cardItems: CardProps[] = [
@@ -20,7 +21,8 @@ const cardItems: CardProps[] = [
       'Los mismos potencian tus habilidades al máximo preparándote para afrontar cualquier situación de la vida cotidiana.',
       '<b>Speakout / Conversacional:</b> 1,30 hrs semanales con orientación a la práctica de Conversación.',
       'Para estudiantes que buscan reforzar conocimientos sin las horas habituales de los cursos regulares.'
-    ]
+    ],
+    height: '330px'
   },
   {
     src: CursosImages[1].src,
@@ -31,7 +33,8 @@ const cardItems: CardProps[] = [
       'Los mismos potencian tus habilidades al máximo preparándote para afrontar cualquier situación de la vida cotidiana.',
       '<b>Speakout / Conversacional:</b> 1,30 hrs semanales con orientación a la práctica de Conversación.',
       'Para estudiantes que buscan reforzar conocimientos sin las horas habituales de los cursos regulares.'
-    ]
+    ],
+    height: '330px'
   },
   {
     src: CursosImages[2].src,
@@ -39,7 +42,8 @@ const cardItems: CardProps[] = [
     titleList: 'Viajeros',
     data: [
       '<b>Cursos para Viajeros:</b> Clases orientadas a la práctica de Vocabulario general para viajes y situaciones típicas de los mismos.'
-    ]
+    ],
+    height: '251px'
   }
 ]
 
@@ -51,45 +55,30 @@ const Cards = () => {
           <Card 
             sx={{ 
               display: 'flex',
-              width: '1072px', height: '314px', 
-              backgroundColor: PrincipalColors.principal, color: PrincipalColors.fontColor
+              width: '1072px', height: `${x.height}`, 
+              color: PrincipalColors.fontColor,
+              borderRadius: '25px',
+              mt: '30px'
             }} 
             key={index}
           >
-            <CardContent sx={{ border: '2px solid red' }}>
+            <CardContent sx={{ backgroundColor: PrincipalColors.secondary }}>
               <CardMedia 
-                sx={{ width: '96px' }}
+                sx={{ width: '251px', height: '251px' }}
                 component="img"
                 image={x.src}
                 alt={x.alt}
               />
             </CardContent>
-            <CardContent sx={{ border: '2px solid green' }}>
-              <Typography sx={{ textAlign: 'center' }}>
+            <CardContent sx={{ backgroundColor: PrincipalColors.principal }}>
+              <Typography sx={{ textAlign: 'center', fontWeight: 400 }} variant="h4">
                 {x.titleList}
               </Typography>
               
-              <ListItems data={x.data}/>
-            </CardContent>
-            {/* <CardContent sx={{ border: '2px solid red' }}>
-              <Box sx={{ display: 'flex', flexDirection: 'row' }}>
-                <Box sx={{ backgroundColor: PrincipalColors.secondary }}>
-                  <CardMedia 
-                    sx={{ width: '96px' }}
-                    component="img"
-                    image={x.src}
-                    alt={x.alt}
-                  />
-                </Box>
-                <Box sx={{  }}>
-                  <Typography sx={{ textAlign: 'center' }}>
-                    {x.titleList}
-                  </Typography>
-                  
-                  <ListItems data={x.data}/>
-                </Box>
+              <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', minHeight: '150px' }}>
+                <ListItems data={x.data}/>
               </Box>
-            </CardContent> */}
+            </CardContent>
           </Card>
         )
       }

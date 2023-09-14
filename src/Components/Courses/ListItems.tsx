@@ -1,4 +1,4 @@
-import { Box, ListItem, ListItemIcon, ListItemText, Typography } from "@mui/material";
+import { Box, ListItem, ListItemIcon, ListItemText } from "@mui/material";
 
 interface ParentProps{
   //titleList: string;
@@ -12,12 +12,8 @@ const ListItems: React.FC<ParentProps> = ( data: ParentProps ) => {
     <>
       {
         arrayParent.map( ( x, index ) => 
-          <ListItem>
-            <Box key={index} sx={{ display: 'flex' }}>
-              {/* <Typography>
-                {x.titleList}
-              </Typography> */}
-              
+          <ListItem sx={{ display: 'flex' }}>
+            <Box key={index} sx={{ display: 'flex', alignItems: 'center' }}>
               <ListItemIcon>
                 <Box 
                   sx={{ 
@@ -26,7 +22,7 @@ const ListItems: React.FC<ParentProps> = ( data: ParentProps ) => {
                   }}
                 />
               </ListItemIcon>
-              <ListItemText primary={ x } sx={{ ml: -2.5 }}/>
+              <ListItemText primary={ x } sx={{ ml: -3 }}/>
             </Box>
           </ListItem>
         )

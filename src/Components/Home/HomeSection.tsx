@@ -3,6 +3,7 @@ import { FirstContactSection } from '../FirstContact/FirstContactSection.tsx';
 import PrepExamenesSection from '../PrepExamenes/PrepExamenesSection.tsx';
 import LanguagesSection from '../Languages/LanguagesSection.tsx';
 import CoursesSection from '../Courses/CoursesSection.tsx';
+import CowSerSection from '../Coworking&Services/cowSerSection.tsx';
 import { Box } from '@mui/material';
 
 const HomeSection = () => {
@@ -14,6 +15,7 @@ const HomeSection = () => {
         <PrepExamenesSection />
         <LanguagesSection />
         <CoursesSection />
+        <CowSerSection />
       </Box>
     </Box>
   )
