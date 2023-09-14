@@ -1,6 +1,8 @@
 import { AppBar } from '../Assets/AppBar.tsx';
 import { FirstContactSection } from '../FirstContact/FirstContactSection.tsx';
 import PrepExamenesSection from '../PrepExamenes/PrepExamenesSection.tsx';
+import LanguagesSection from '../Languages/LanguagesSection.tsx';
+import CoursesSection from '../Courses/CoursesSection.tsx';
 import { Box } from '@mui/material';
 
 const HomeSection = () => {
@@ -10,6 +12,8 @@ const HomeSection = () => {
       <FirstContactSection />
       <Box sx={{ pt: 112 }}>
         <PrepExamenesSection />
+        <LanguagesSection />
+        <CoursesSection />
       </Box>
     </Box>
   )

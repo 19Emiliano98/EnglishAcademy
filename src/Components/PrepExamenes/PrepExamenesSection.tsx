@@ -57,7 +57,10 @@ const cardRender = (
             </Box>
             <ThemeProvider theme={themeProvider}>
               <Button 
-                sx={{ backgroundColor: PrincipalColors.secondary }}
+                sx={{ 
+                  width: '340px', height: '55px',
+                  backgroundColor: PrincipalColors.secondary
+                }}
                 color='secondary'
                 variant="contained"
               >
@@ -79,13 +82,16 @@ const PrepExamenesSection = () => {
       }}
     >
       <Typography 
-        sx={{  }}
+        sx={{ 
+          fontFamily: 'Work Sans', fontSize: '60px', fontWeight: 500,
+          lineHeight: '72px', letterSpacing: '-0.5px', mb: '72px'
+        }}
         variant="h2"
       >
         Preparación de exámenes
       </Typography>
       
-      <Box sx={{ display: 'flex', mt: '72px' }}>
+      <Box sx={{ display: 'flex' }}>
         {cardRender}
       </Box>
     </Box>
