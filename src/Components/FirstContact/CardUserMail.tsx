@@ -15,7 +15,7 @@ const renderInputs = (
       sx={{ width: '150px', height: '56px' }}
       variant="contained"
     >
-      Comenzar <ArrowForwardIcon />
+      Comenzar <Box sx={{ mt: 0.9, ml: 1.5 }}><ArrowForwardIcon /></Box>
     </Button>
   </ThemeProvider>
 )

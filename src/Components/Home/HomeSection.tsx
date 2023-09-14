@@ -3,7 +3,9 @@ import { FirstContactSection } from '../FirstContact/FirstContactSection.tsx';
 import PrepExamenesSection from '../PrepExamenes/PrepExamenesSection.tsx';
 import LanguagesSection from '../Languages/LanguagesSection.tsx';
 import CoursesSection from '../Courses/CoursesSection.tsx';
-import CowSerSection from '../Coworking&Services/cowSerSection.tsx';
+import CowSerSection from '../Coworking&Services/CowSerSection.tsx';
+import AboutsUsSection from '../AboutUs/AboutsUsSection.tsx';
+import FormSection from '../Formulary/FormSection.tsx';
 import { Box } from '@mui/material';
 
 const HomeSection = () => {
@@ -16,6 +18,8 @@ const HomeSection = () => {
         <LanguagesSection />
         <CoursesSection />
         <CowSerSection />
+        <AboutsUsSection />
+        <FormSection />
       </Box>
     </Box>
   )
