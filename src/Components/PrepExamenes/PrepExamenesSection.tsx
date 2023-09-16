@@ -1,13 +1,11 @@
-import { Box, Card, CardContent, Typography, List, Button } from "@mui/material";
-import { ThemeProvider } from "@mui/material";
 import ListItems from "./ListItems";
-import { PrincipalColors, themeProvider } from "../Assets/ThemeStyle";
-
+import { Colors, TypographyH2 } from "../Assets/Styles";
+import { StandardButton } from "../Assets/ButtonsStyle.tsx";
+import { Box, Card, CardContent, Typography, List } from "@mui/material";
 interface CardsProps{
   title: string;
   items: string[];
 }
-
 const Cards:CardsProps[] = [
   { 
     title: 'Exámenes UNR', 
@@ -34,11 +32,12 @@ const cardRender = (
         <Card
           sx={{ 
             width: '387px', 
-            backgroundColor: PrincipalColors.principal, 
-            color: PrincipalColors.fontColor,
+            backgroundColor: Colors.principal, 
+            color: Colors.fontColor,
             borderRadius: '25px',
             m: '0px 12px'
           }}
+          key={index}
         >
           <CardContent key={index} sx={{ textAlign: 'center' }}>
             <Box sx={{ height: '325px' }}>
@@ -55,18 +54,7 @@ const cardRender = (
                 <ListItems dataItems={x.items}/>
               </List>
             </Box>
-            <ThemeProvider theme={themeProvider}>
-              <Button 
-                sx={{ 
-                  width: '340px', height: '55px',
-                  backgroundColor: PrincipalColors.secondary
-                }}
-                color='secondary'
-                variant="contained"
-              >
-                Mas informacion
-              </Button>
-            </ThemeProvider>
+            <StandardButton content={'Mas informacion'} icon={false} width={'324px'}/>
           </CardContent>
         </Card>
       )
@@ -81,13 +69,7 @@ const PrepExamenesSection = () => {
         display: 'flex', flexDirection: 'column', alignItems: 'center'
       }}
     >
-      <Typography 
-        sx={{ 
-          fontFamily: 'Work Sans', fontSize: '60px', fontWeight: 500,
-          lineHeight: '72px', letterSpacing: '-0.5px', mb: '72px'
-        }}
-        variant="h2"
-      >
+      <Typography sx={{ ...TypographyH2 }} variant="h2">
         Preparación de exámenes
       </Typography>
       

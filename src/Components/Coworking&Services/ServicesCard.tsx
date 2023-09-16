@@ -1,5 +1,5 @@
 import { Box, Card, CardContent, Typography } from "@mui/material";
-import { PrincipalColors } from "../Assets/ThemeStyle";
+import { Colors } from "../Assets/Styles";
 
 const cardData: string[] = [
   'Salón con pupitres, mesas y sillas',
@@ -16,7 +16,7 @@ const ServicesCard = () => {
           <Card 
             sx={{
               width: '257px', height: '250px',
-              backgroundColor: PrincipalColors.principal, color: PrincipalColors.fontColor,
+              backgroundColor: Colors.principal, color: Colors.fontColor,
               borderRadius: '25px',
               ml: '16px'
             }}

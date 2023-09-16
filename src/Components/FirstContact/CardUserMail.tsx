@@ -1,7 +1,7 @@
 import { Box, Card, CardContent, Typography, TextField, Button } from '@mui/material';
+import { themeProvider, TypographyH1, TypographyH6 } from '../Assets/Styles';
 import { ThemeProvider } from '@mui/material/styles';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import { themeProvider } from '../Assets/ThemeStyle';
 
 const renderInputs = (
   <ThemeProvider theme={themeProvider}>
@@ -13,6 +13,7 @@ const renderInputs = (
     />
     <Button 
       sx={{ width: '150px', height: '56px' }}
+      color='primary'
       variant="contained"
     >
       Comenzar <Box sx={{ mt: 0.9, ml: 1.5 }}><ArrowForwardIcon /></Box>
@@ -32,27 +33,14 @@ const CardUserMail = () => {
       }}
     >
       <CardContent sx={{ display: 'flex', flexDirection: 'column', mt: '13px', ml: '32px' }}>
-        <Typography
-          sx={{
-            width: 750,
-            color: '#312783', fontFamily: 'Work Sans', fontSize: '80px',
-            fontStyle: 'normal', fontWeight: 700, lineHeight: '112px',
-            letterSpacing: '-1,5px'
-          }}
-          variant='h1'
-        >
+        <Typography sx={{ ...TypographyH1, width: 750 }} variant='h1'>
           En Access, aprendemos idiomas
         </Typography>
-        <Typography
-          sx={{
-            color: '#000', fontFamily: 'Work Sans', fontSize: '20px',
-            fontWeight: 500, lineHeight: '32px', letterSpacing: '0.15px',
-            mt: 3, mr: 33,
-          }}
-          variant='h6'
-        >
+        
+        <Typography sx={{ ...TypographyH6, mt: 3, mr: 33 }} variant='h6'>
           Dejanos tu correo electrónico y te contactaremos en breve.
         </Typography>
+        
         <Box sx={{ mt: 7, ml: '8px' }}>
           {renderInputs}
         </Box>

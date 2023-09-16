@@ -1,14 +1,13 @@
-import { Box, Card, CardContent, Button, Typography } from '@mui/material';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import { ThemeProvider } from "@mui/material";
-import { PrincipalColors, themeProvider } from '../Assets/ThemeStyle';
+import { Box, Card, CardContent, Typography } from '@mui/material';
+import { Colors } from '../Assets/Styles';
+import { StandardButton } from '../Assets/ButtonsStyle';
 
 const AboutUsCard = () => {
   return (
     <Card
       sx={{
         width: '1078px', height: '322px', borderRadius: '25px',
-        backgroundColor: PrincipalColors.principal, color: PrincipalColors.fontColor
+        backgroundColor: Colors.principal, color: Colors.fontColor
       }}
     >
       <CardContent>
@@ -24,23 +23,12 @@ const AboutUsCard = () => {
           </Typography>
         </Box>
 
-        <ThemeProvider theme={themeProvider}>
-          <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-            <Button 
-              sx={{ 
-                width: '340px', height: '55px',
-                backgroundColor: PrincipalColors.secondary
-              }}
-              color='secondary'
-              variant="contained"
-            >
-              QUIERO CONSULTAR <Box sx={{ mt: 0.7, ml: 1.5 }}><ArrowForwardIcon /></Box>
-            </Button>
-          </Box>
-        </ThemeProvider>
+        <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+          <StandardButton content={'Quiero consultar'} icon={true} width={'457px'}/>
+        </Box>
       </CardContent>
     </Card>
   )
 }
 
-export default AboutUsCard
+export default AboutUsCard;

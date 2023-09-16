@@ -1,7 +1,7 @@
 import BackgroundDecoration from "./BackgroundDecoration"
 import Card from "./ContactUser";
 
-export const FirstContactSection = () => {
+const FirstContactSection = () => {
   return (
     <>
       <BackgroundDecoration />
@@ -9,3 +9,5 @@ export const FirstContactSection = () => {
     </>
   )
 }
+
+export default FirstContactSection;

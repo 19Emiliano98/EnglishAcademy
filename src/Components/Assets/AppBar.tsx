@@ -1,4 +1,5 @@
 import React from 'react';
+import { Navbar, LinkNavbar } from './Styles';
 import Link from '@mui/material/Link/Link';
 import { Box, Toolbar, MenuItem, CardMedia } from '@mui/material';
 import logo1 from '../../Img/logos/logo1.png';
@@ -21,11 +22,7 @@ const renderOptionBar = (
   linkBar.map( links => (
     <MenuItem key={links.title}>
       <Link 
-        sx={{ 
-          textDecoration: 'none', color: '#1F1855',
-          fontSize: '20px', fontFamily: 'Work Sans', fontWeight: 700, lineHeight: '20px',
-          borderRight: `${links.border} solid black`, pr: 1.5, mr: -2.5
-        }} 
+        sx={{ ...LinkNavbar, borderRight: `${links.border} solid black` }} 
         href={ `${links.dominion}` }
       >
         {links.title}
@@ -34,14 +31,9 @@ const renderOptionBar = (
   ))
 );
 
-export const AppBar: React.FC = () => {
+const AppBar: React.FC = () => {
   return (
-    <Toolbar 
-      sx={{ 
-        display: 'flex', justifyContent: 'flex-end', alignItems: 'center',
-        position: 'fixed', backgroundColor: '#FFA500', minWidth: '98vw', zIndex: 1
-      }}
-    >
+    <Toolbar sx={{ ...Navbar }}>
       <CardMedia
         sx={{
           width: '197px',
@@ -59,3 +51,5 @@ export const AppBar: React.FC = () => {
     </Toolbar>
   )
 }
+
+export default AppBar;

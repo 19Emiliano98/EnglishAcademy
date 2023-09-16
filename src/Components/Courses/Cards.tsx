@@ -1,7 +1,7 @@
 import { Box, Card, CardContent, CardMedia, Typography } from "@mui/material";
 import ListItems from "./ListItems";
 import { CursosImages } from "../Assets/ImagesLoader";
-import { PrincipalColors } from "../Assets/ThemeStyle";
+import { Colors } from "../Assets/Styles";
 
 interface CardProps{
   src: string;
@@ -56,13 +56,13 @@ const Cards = () => {
             sx={{ 
               display: 'flex',
               width: '1072px', height: `${x.height}`, 
-              color: PrincipalColors.fontColor,
+              color: Colors.fontColor,
               borderRadius: '25px',
               mt: '30px'
             }} 
             key={index}
           >
-            <CardContent sx={{ backgroundColor: PrincipalColors.secondary }}>
+            <CardContent sx={{ backgroundColor: Colors.secondary }}>
               <CardMedia 
                 sx={{ width: '251px', height: '251px' }}
                 component="img"
@@ -70,7 +70,7 @@ const Cards = () => {
                 alt={x.alt}
               />
             </CardContent>
-            <CardContent sx={{ backgroundColor: PrincipalColors.principal }}>
+            <CardContent sx={{ backgroundColor: Colors.principal }}>
               <Typography sx={{ textAlign: 'center', fontWeight: 400 }} variant="h4">
                 {x.titleList}
               </Typography>

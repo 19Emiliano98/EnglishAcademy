@@ -12,8 +12,8 @@ const ListItems: React.FC<ParentProps> = ( data: ParentProps ) => {
     <>
       {
         arrayParent.map( ( x, index ) => 
-          <ListItem sx={{ display: 'flex' }}>
-            <Box key={index} sx={{ display: 'flex', alignItems: 'center' }}>
+          <ListItem sx={{ display: 'flex' }} key={index}>
+            <Box  sx={{ display: 'flex', alignItems: 'center' }}>
               <ListItemIcon>
                 <Box 
                   sx={{ 

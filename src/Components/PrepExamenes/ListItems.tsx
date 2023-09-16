@@ -6,13 +6,12 @@ interface ParentProps{
 
 const ListItems: React.FC<ParentProps> = ( dataItems:ParentProps ) => {
   const arrayParent = dataItems.dataItems
-
+  
   return (
     <>
       {
         arrayParent.map( ( x, index ) => 
-          <ListItem>
-            <Box key={index} sx={{ display: 'flex', alignItems: 'center' }}>
+          <ListItem sx={{ display: 'flex', alignItems: 'center' }} key={index}>
               <ListItemIcon>
                 <Box 
                   sx={{ 
@@ -22,7 +21,6 @@ const ListItems: React.FC<ParentProps> = ( dataItems:ParentProps ) => {
                 />
               </ListItemIcon>
               <ListItemText primary={ x } sx={{ ml: -3 }}/>
-            </Box>
           </ListItem>
         )
       }

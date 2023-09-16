@@ -1,6 +1,6 @@
 import { Box, Card, CardContent, CardMedia, Typography } from "@mui/material";
 import { languagesLogos } from "../Assets/ImagesLoader";
-import { PrincipalColors } from "../Assets/ThemeStyle";
+import { Colors } from "../Assets/Styles";
 
 interface CardProps{
   title: string;
@@ -39,8 +39,8 @@ const Cards = () => {
             sx={{ 
               display: 'flex', justifyContent: 'center', 
               width: '250px', height: '250px', 
-              backgroundColor: PrincipalColors.principal,
-              color: PrincipalColors.fontColor,
+              backgroundColor: Colors.principal,
+              color: Colors.fontColor,
               borderRadius: '25px', mr: '33px'
             }}
             key={index}

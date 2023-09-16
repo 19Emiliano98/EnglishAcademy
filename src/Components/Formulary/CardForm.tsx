@@ -1,13 +1,13 @@
 import { Card, CardContent, Typography } from "@mui/material";
 import FormularyData from "./FormularyData";
-import { PrincipalColors } from "../Assets/ThemeStyle";
+import { Colors } from "../Assets/Styles";
 
 const CardForm = () => {
   return (
     <Card
       sx={{
         width: '1076px', height: '700px', borderRadius: '25px',
-        background: PrincipalColors.principal, color: PrincipalColors.fontColor 
+        background: Colors.principal, color: Colors.fontColor, pb: '16px'
       }}
     >
       <CardContent>
